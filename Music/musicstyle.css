@@ -1,0 +1,194 @@
+body {
+  overflow: scroll;
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
+  height: 100%;
+  height: 100vh;
+  min-height: 500px;
+  background: rgb(31, 34, 65);
+}
+
+nav {
+  background-color: rgb(31, 34, 65);
+  overflow: hidden;
+  position: fixed;
+  top:0;
+  right: 0;
+  left: 0;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+
+  margin-top: 25px;
+  margin-left: 300px;
+  margin-right: 240px;
+  margin-bottom: 10px;
+}
+
+.size-class {
+  font-size: 20px;
+}
+
+nav li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 10px 16px; /* adjust padding */
+  text-decoration: none;
+  border-radius: 25px; /* add rounded corners */
+  transition: background-color 0.3s ease;
+
+  font-weight: 500;
+}
+
+nav li a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.musicCtrl {
+
+}
+
+/* play, stop, pause style */
+.musicCtrl #musicButton {
+    margin-left: 10px;
+    display: inline-block;
+    background-color: rgb(238, 114, 118);
+    padding: 15px 15px;
+    cursor: pointer;
+    border: none;
+    color: white;
+    font-family: 'Inter', sans-serif;
+    font-weight:200;
+    border-radius: 10px;
+    font-size: 25px;
+}
+
+.musicCtrl #musicButton:hover {
+  background-color: rgb(31, 34, 65);
+  box-shadow: 0px 0px 10px 5px rgb(57, 62, 121);
+}
+
+/* all music controls */
+.musicDiv {
+  display: flex;
+  float: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.musicTitle {
+    font-family:'Inter', sans-serif;
+    font-size: 55px;
+    color: white;
+    font-weight:500;
+    margin-top: 50px;
+}
+
+.visual {
+    margin-bottom: 50px;
+    height: 50px;
+    width: 50px;
+    background-color: #555;
+    border-radius: 50%;
+}
+
+.volStyle {
+  margin-top: 15px;
+  padding: 15px;
+  opacity: 0.7;
+}
+
+/* slider design*/
+.slider::-moz-range-thumb {
+  margin-top: 15px;
+  width: 15px;
+  height: 15px;
+  background: rgb(238, 114, 118);
+  cursor: pointer;
+  border: none;
+  border-radius: 50%;
+}
+
+.slider {
+  border-radius: 10px;
+}
+
+.slider:hover {
+  cursor: pointer;
+}
+
+.volStyle:hover {
+  opacity: 1;
+}
+
+
+/* dropdown menu */
+.dropdown {
+  background-color: rgb(238, 114, 118);
+  color: white;
+  padding: 5px;
+  margin-top: 15px;
+  font-family: 'Inter', sans-serif;
+  font-size: 15px;
+  font-weight:200;
+  border: none;
+  border-radius: 10px;
+}
+
+.selectTrack {
+
+  display: inline-block;
+  
+}
+
+/*dropdown Content (Hidden by Default) - overflow enables scroll*/
+.playlist {
+  
+  display: none;
+  position: fixed;
+  background-color: #f1f1f1;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  overflow: scroll;
+  height: 100px;
+}
+
+/*buttons inside the dropdown */
+.playlist #trkBtn {
+  background-color: #f1f1f1;
+  color: black;
+  padding: 5px 5px;
+  text-decoration: none;
+  display: block;
+  border-color:rgb(238, 114, 118);
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+  font-weight:200;
+  width: 150px;
+}
+
+.playlist #trkBtn:hover {
+  background-color: #ddd;
+  cursor: pointer;
+}
+
+/*reveals dropdown on hover*/
+.selectTrack:hover .playlist {
+  display: block;
+  cursor: pointer;
+  position: absolute;
+
+}
+
+.selectTrack:hover .dropdown {
+  background-color: rgb(31, 34, 65);
+  cursor: pointer;
+  box-shadow: 0px 0px 10px 5px rgb(57, 62, 121);
+}

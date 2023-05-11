@@ -1,0 +1,85 @@
+<html>
+    <head>
+
+        <!--css-->
+
+        <link rel="stylesheet" href="./musicstyle.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;500&display=swap" rel="stylesheet">
+
+    </head>
+    <body>
+
+        <div class="backHome">
+            <a href="website-link-goes-here" target="_blank">Home</a>
+        </div>
+
+        <nav>
+            <ul>
+              <li><a class="size-class" href="../Homepage/index.html" target="_blank">Home</a></li>
+              <li><a class="size-class" href="../Calendar/index.html" target="_blank">Calendar</a></li>
+              <li><a class="size-class" href="../Pomodoro Timer/index.html" target="_blank">Pomodoro Timer</a></li>
+            </ul>
+          </nav>
+
+        <div class="musicDiv">
+
+            <div class="musicTitle">
+                <h3>Music</h3>
+            </div>
+
+            <!--<div class="visual">
+                
+            </div>-->
+
+
+            <div class="musicCtrl">
+                <button id="musicButton" onclick="playMusic()">
+                    Play
+                </button>
+
+                <button id="musicButton" onclick="turnOff()">
+                    Stop
+                </button>
+
+                <button id="musicButton" onclick="pause()">
+                    Pause
+                </button>
+            </div>
+
+            <div class="volStyle">
+                <input id="volCtrl" type="range" min="0" max="100" step="1" oninput="thisVolume(this.value)" onchange="thisVolume(this.value)" class="slider"></input>
+            </div>
+
+           
+
+            <div class="selectTrack">
+                <button class="dropdown">Select Track</button>
+                <div class="playlist">
+                    <button id="trkBtn" onclick="track1()">
+                        Chill Beat  
+                    </button>
+                    <button id="trkBtn" onclick="track2()">
+                        Study Time
+                    </button>
+                    <button id="trkBtn" onclick="track3()">
+                        Upbeat Office  
+                    </button>
+                    <button id="trkBtn" onclick="track4()">
+                        Meditation
+                    </button>
+                    <button id="trkBtn" onclick="track5()">
+                        Rainy Day
+                    </button>
+                </div>
+            </div>
+
+        </div>
+
+        <!--music script-->
+
+        <script src = './music.js'></script>
+
+    </body>
+</html>
